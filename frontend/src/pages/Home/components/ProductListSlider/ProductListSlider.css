@@ -1,0 +1,27 @@
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 500px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.product-card h5 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #333;
+}
+.splide__slide.is-active .product-card {
+  transform: scale(1.08);
+  z-index: 2;
+}

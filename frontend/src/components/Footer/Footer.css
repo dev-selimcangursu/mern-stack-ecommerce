@@ -1,0 +1,151 @@
+.footer {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 3rem 1.5rem 2rem;
+  user-select: none;
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #333;
+  user-select: text;
+}
+
+.footer-description {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  user-select: text;
+}
+
+.footer-support {
+  margin-bottom: 1.2rem;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 0.7rem;
+  user-select: text;
+}
+
+.support-item span {
+  margin-left: 0.4rem;
+  margin-right: 0.3rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.support-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.support-item a:hover,
+.support-item a:focus {
+  color: #333;
+  outline: none;
+}
+
+.support-icon {
+  color: #333;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #333;
+  color: #eee;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  background-color: #226baf;
+  color: #fff;
+  outline: none;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  user-select: text;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  user-select: text;
+}
+
+.footer-links ul li a:hover,
+.footer-links ul li a:focus {
+  color: #226baf;
+  outline: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}

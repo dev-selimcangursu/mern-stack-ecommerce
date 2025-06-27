@@ -1,0 +1,60 @@
+.pos-slider {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.pos-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+.splide__slide {
+  display: flex;
+  align-items: stretch;
+}
+
+.pos-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 220px; 
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.pos-card:hover {
+  transform: translateY(-5px);
+}
+
+.pos-card-img {
+  width: auto;
+  height: 80px; 
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .pos-slider {
+    padding: 2rem 1rem;
+  }
+
+  .pos-title {
+    font-size: 1.6rem;
+  }
+
+  .pos-card {
+    height: 180px;
+  }
+
+  .pos-card-img {
+    height: 60px;
+  }
+
+  .pos-card-caption {
+    font-size: 0.9rem;
+  }
+}

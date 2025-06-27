@@ -38,7 +38,7 @@ function BlogArea() {
           {top8Blog.map((blog) => (
             <SplideSlide key={blog._id}>
               <article className="blog-card">
-                <a href={`/blog/${blog.slug}`} className="blog-link">
+                <a href={`/blog/detay/${blog.slug}`} className="blog-link">
                   <img
                     src={blog.coverImage}
                     alt={blog.title}

@@ -10,14 +10,14 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import "./Footer.css";
-
+import Logo from '../assets/logo.png'
 function Footer() {
   return (
     <footer className="footer" aria-label="Site Footer">
       <div className="footer-container">
         <div className="footer-section footer-brand">
           <h2 className="footer-logo" tabIndex="0">
-            Burada Logo Olacak
+            Wiky Watch
           </h2>
           <p className="footer-description" tabIndex="0">
             Çocuklarınız için güvenilir ve eğlenceli akıllı saat çözümleri.

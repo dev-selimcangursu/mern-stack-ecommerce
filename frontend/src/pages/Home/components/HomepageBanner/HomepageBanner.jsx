@@ -5,7 +5,7 @@ import { fetchSectionProduct } from "../../../../redux/slices/ProductSlice";
 import BannerImageOne from "../../../../assets/banner1.jpeg";
 import BannerImageSecond from "../../../../assets/banner2.jpeg";
 import "./HomepageBanner.css";
-
+import Banner1Video from "../../../../components/assets/videos/banner-1-video.mp4";
 function HomepageBanner() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function HomepageBanner() {
       <div className="row">
         <div className="col-md-6 mb-4 mb-md-0 homepage__video-wrapper">
           <video
-            src="https://media.istockphoto.com/id/1265149260/tr/video/parkta-ak%C4%B1ll%C4%B1-saat-kullanan-%C3%A7ocuk-%C3%A7ocuk-ak%C4%B1ll%C4%B1-telefon-vdeo-arama-konu%C5%9Fuyor-internette.mp4?s=mp4-640x640-is&k=20&c=4CD3OXN_vr0VMxYNehyzb5Et5Ielg7RXcxkGCHm3kGo="
+            src={Banner1Video}
             autoPlay
             loop
             muted

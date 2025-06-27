@@ -6,13 +6,43 @@ import Wiky4SImage from "../../../../components/assets/products/banner-4s.jpeg";
 import Wiky5EImage from "../../../../components/assets/products/banner-5e.jpeg";
 import Wiky5PlusImage from "../../../../components/assets/products/banner-5plus.jpeg";
 import Wiky5SImage from "../../../../components/assets/products/banner-5s.jpeg";
+import { useDispatch } from "react-redux";
+import { fetchSectionProduct } from "../../../../redux/slices/ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 function ProductListSlider() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function productPageNavigate(slug) {
+    dispatch(fetchSectionProduct(slug));
+    navigate(`/urun/detay/${slug}`);
+  }
   const products = [
-    { id: 1, title: "Wiky Watch 5S", image: Wiky5SImage },
-    { id: 2, title: "Wiky Watch 4", image: Wiky5EImage },
-    { id: 3, title: "Wiky Watch Aksesuar", image: Wiky5PlusImage },
-    { id: 4, title: "Wiky Watch 3", image: Wiky4SImage },
+    {
+      id: 1,
+      title: "Wiky Watch 5S",
+      image: Wiky5SImage,
+      slug: "wiky-watch-5s-akilli-cocuk-saati",
+    },
+    {
+      id: 2,
+      title: "Wiky Watch 5E",
+      image: Wiky5EImage,
+      slug: "wiky-watch-5e-akilli-cocuk-saati",
+    },
+    {
+      id: 3,
+      title: "Wiky Watch 5Plus",
+      image: Wiky5PlusImage,
+      slug: "wiky-watch-5plus-akilli-cocuk-saati",
+    },
+    {
+      id: 4,
+      title: "Wiky Watch 4S",
+      image: Wiky4SImage,
+      slug: "wiky-watch-4s-akilli-cocuk-saati",
+    },
   ];
 
   return (
@@ -30,7 +60,10 @@ function ProductListSlider() {
       >
         {products.map((product) => (
           <SplideSlide key={product.id}>
-            <div className="product-card">
+            <div
+              className="product-card"
+              onClick={() => productPageNavigate(product.slug)}
+            >
               <img src={product.image} alt={product.title} />
             </div>
           </SplideSlide>

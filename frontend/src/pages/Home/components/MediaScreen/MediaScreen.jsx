@@ -2,33 +2,38 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "./MediaScreen.css";
+import Reviews1 from '../../../../components/assets/commit-video/wikywatch-instagram-video1.mp4'
+import Reviews2 from '../../../../components/assets/commit-video/wikywatch-instagram-video6.mp4'
+import Reviews3 from '../../../../components/assets/commit-video/wikywatch-instagram-video4.mp4'
+import Reviews4 from '../../../../components/assets/commit-video/wikywatch-instagram-video2.mp4'
+import Reviews5 from '../../../../components/assets/commit-video/wikywatch-instagram-video3.mp4'
 
-// Örnek video verisi
+
 const userVideos = [
   {
     id: 1,
     title: "Wiky Watch Kullanıcı Videosu 1",
-    url: "https://www.youtube.com/embed/uci1KXfzLTU",
+    url: Reviews1,
   },
   {
     id: 2,
     title: "Wiky Watch Kullanıcı Videosu 2",
-    url: "https://www.youtube.com/embed/uci1KXfzLTU",
+    url: Reviews2,
   },
   {
     id: 3,
     title: "Wiky Watch Kullanıcı Videosu 3",
-    url: "https://www.youtube.com/embed/uci1KXfzLTU",
+    url: Reviews3,
   },
   {
     id: 4,
     title: "Wiky Watch Kullanıcı Videosu 4",
-    url: "https://www.youtube.com/embed/uci1KXfzLTU",
+    url: Reviews4,
   },
   {
     id: 5,
     title: "Wiky Watch Kullanıcı Videosu 5",
-    url: "https://www.youtube.com/embed/uci1KXfzLTU",
+    url: Reviews5,
   },
 ];
 

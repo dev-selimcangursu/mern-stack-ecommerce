@@ -28,11 +28,10 @@
 }
 
 .app-slider-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #333;
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .splide__slide {

@@ -4,10 +4,10 @@
 }
 
 .media-title {
-  text-align: center;
-  font-size: 1.5rem;
+ text-align: center;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: #222;
+  color: #333;
 }
 
 .splide__slide {
@@ -33,7 +33,7 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Kare oran */
+  padding-top: 100%; 
   overflow: hidden;
 }
 

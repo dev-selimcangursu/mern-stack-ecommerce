@@ -24,13 +24,13 @@ function ProductListSlider() {
       id: 1,
       title: "Wiky Watch 5S Akıllı Çocuk Saati",
       image: Wiky5SImage,
-      slug: "wiky-watch-5s-akilli-cocuk-saati",
+      slug: "wiky-watch-5s-akilli-cocuk-saati-pembe",
     },
     {
       id: 2,
       title: "Wiky Watch 5E Akıllı Çocuk Saati",
       image: Wiky5EImage,
-      slug: "wiky-watch-5e-akilli-cocuk-saati",
+      slug: "wiky-watch-5e-akilli-cocuk-saati-mavi",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ function ProductListSlider() {
       id: 4,
       title: "Wiky Watch 4S Akıllı Çocuk Saati",
       image: Wiky4SImage,
-      slug: "wiky-watch-4s-akilli-cocuk-saati",
+      slug: "wiky-watch-4s-akilli-cocuk-saati-siyah",
     },
   ];
 

@@ -33,7 +33,7 @@ function HomepageBanner() {
             <div
               className="productCard col-md-6"
               onClick={() =>
-                handleBannerClick("wiky-watch-5s-akilli-cocuk-saati")
+                handleBannerClick("wiky-watch-5s-akilli-cocuk-saati-pembe")
               }
             >
               <article className="card card--promo text-bg-dark h-100 shadow-sm">
@@ -47,7 +47,7 @@ function HomepageBanner() {
             <div
               className="productCard col-md-6"
               onClick={() =>
-                handleBannerClick("wiky-watch-5e-akilli-cocuk-saati")
+                handleBannerClick("wiky-watch-5e-akilli-cocuk-saati-mavi")
               }
             >
               <article className="card card--promo text-bg-dark h-100 shadow-sm">

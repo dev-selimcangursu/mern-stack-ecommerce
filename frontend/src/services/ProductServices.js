@@ -10,3 +10,14 @@ export const sectionSlugProductService = async(productSlug)=>{
         throw error
     }
 }
+
+// Home Öne Çıkan Ürünler Listele
+export const sectionIsPopularService = async()=>{
+    try {
+        const data = await axios.get('http://localhost:5000/product/fetch/popular')
+        return data.data
+    } catch (error) {
+        console.log(error)
+        throw error
+    }
+}

@@ -53,3 +53,32 @@ export const productLink = async (req, res) => {
     });
   }
 };
+
+// Home Popüler Ürünlerin Listelenmesi
+export const isPopularProduct = async (req, res) => {
+  try {
+    const populerProductList = await Product.find({
+      is_popular: true,
+    });
+
+    if (!populerProductList.length) {
+      return res.json({
+        success: false,
+        message: "Hiç popüler ürün bulunamadı!",
+      });
+    }
+
+    res.json({
+      success: true,
+      message: "Popüler ürünler listelendi",
+      data: populerProductList,
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({
+      success: false,
+      message: `Bilinmeyen populerProductList hatası ${error}`,
+    });
+  }
+};
+

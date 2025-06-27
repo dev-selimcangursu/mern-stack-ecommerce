@@ -26,6 +26,12 @@ const ProductSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     }, // Ürün yayında mı?
+    image_url:{
+      type:String,
+    },
+    is_popular:{
+      type:Boolean
+    }
   },
   { timestamps: true }
 );

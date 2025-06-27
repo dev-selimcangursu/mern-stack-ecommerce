@@ -6,6 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter as RouterProvider } from "react-router-dom";
 import Router from "./router";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <RouterProvider>
         <Header />
         <Router />
+        <Footer/>
       </RouterProvider>
     </>
   );

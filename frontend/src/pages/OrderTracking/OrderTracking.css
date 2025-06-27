@@ -1,0 +1,116 @@
+.order-tracking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1rem;
+}
+
+.order-tracking-wrapper {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.order-tracking-info {
+  flex: 1 1 50%;
+  color: #333;
+  padding: 3rem 2rem;
+}
+
+.order-tracking-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.order-tracking-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.order-tracking-benefits {
+  list-style: none;
+  padding: 0;
+}
+
+.order-tracking-benefits li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.order-tracking-form {
+  flex: 1 1 50%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.order-tracking-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+  transition: border 0.3s;
+}
+
+.order-tracking-form input:focus {
+  border-color: gray;
+}
+
+.order-tracking-form button {
+  padding: 0.75rem 1rem;
+  background: rgb(204, 15, 15);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.order-tracking-form button:hover {
+  background: rgb(192, 12, 12);
+}
+
+.form-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-note a {
+  color: rgb(204, 15, 15);
+  text-decoration: none;
+}
+
+.form-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .order-tracking-wrapper {
+    flex-direction: column;
+  }
+
+  .order-tracking-info,
+  .order-tracking-form {
+    flex: 1 1 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .order-tracking-title {
+    font-size: 1.7rem;
+  }
+}

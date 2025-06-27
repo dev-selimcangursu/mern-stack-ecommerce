@@ -1,7 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Webform.css";
+import { postWebform } from "../../../../redux/slices/WebformSlice";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 function Webform() {
+  const dispatch = useDispatch();
+  const webFormResult = useSelector((state) => state.webform.webform);
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [product, setProduct] = useState("");
+
+  // Webform Submit Sonucu
+  useEffect(() => {
+    if (webFormResult && webFormResult.message) {
+      Swal.fire({
+        icon: webFormResult.success ? "success" : "error",
+        title: webFormResult.success ? "Başarılı" : "Hata",
+        text: webFormResult.message,
+        confirmButtonText: "Tamam",
+      });
+
+      if (webFormResult.success) {
+        // Başarılıysa formu temizle
+        setName("");
+        setPhone("");
+        setProduct("");
+      }
+    }
+  }, [webFormResult]);
+
+  function handleNameChange(e) {
+    setName(e.target.value);
+  }
+
+  function handlePhoneChange(e) {
+    setPhone(e.target.value);
+  }
+
+  function handleProductChange(e) {
+    setProduct(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const formData = { name, phone, product };
+    dispatch(postWebform(formData));
+  }
+
   return (
     <section className="webform-hero" aria-label="Bilgi Formu">
       <video
@@ -21,25 +68,41 @@ function Webform() {
         <p className="webform-subtitle">
           Formu doldurun, en kısa sürede sizi arayalım!
         </p>
-        <form className="webform" action="#" method="POST">
+        <form className="webform" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
+            value={name}
+            onChange={handleNameChange}
             placeholder="Adınız Soyadınız"
             required
           />
           <input
             type="tel"
             name="phone"
+            value={phone}
+            onChange={handlePhoneChange}
             placeholder="05xx xxx xx xx"
             required
           />
-          <input
-            type="text"
+          <select
             name="model"
-            placeholder="İlgilendiğiniz Model"
+            value={product}
+            onChange={handleProductChange}
             required
-          />
+          >
+            <option value="">İlgilendiğiniz Modeli Seçin</option>
+            <option value="685e975f710164c7294f2040">
+              Wiky Watch 5S Pembe
+            </option>
+            <option value="685e97d07f69cebf404a1f17">Wiky Watch 5E Mavi</option>
+            <option value="685e98297f69cebf404a1f18">
+              Wiky Watch 4S Siyah
+            </option>
+            <option value="685e98727f69cebf404a1f19">
+              Wiky Watch 5 Plus Pembe
+            </option>
+          </select>
           <button type="submit" className="webform-submit">
             Bilgi Al
           </button>

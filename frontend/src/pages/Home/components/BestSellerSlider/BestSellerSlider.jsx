@@ -92,7 +92,7 @@ function BestSellerSlider() {
             </SplideSlide>
           ))}
       </Splide>
-    </section>
+    </section> 
   );
 }
 

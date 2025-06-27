@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeVideoArea.css";
-
+import VideoPlayBack from "../../../../components/assets/videos/videoplayback.mp4";
 function HomeVideoArea() {
   const handleRedirect = () => {
     window.location.href = "https://www.wikywatch.com";
@@ -15,10 +15,19 @@ function HomeVideoArea() {
       onClick={handleRedirect}
     >
       <meta itemProp="name" content="Wiky Akıllı Saat Tanıtım Videosu" />
-      <meta itemProp="description" content="Wiky akıllı saatlerin tanıtım videosunu izleyin." />
+      <meta
+        itemProp="description"
+        content="Wiky akıllı saatlerin tanıtım videosunu izleyin."
+      />
       <meta itemProp="uploadDate" content="2024-12-01" />
-      <meta itemProp="contentUrl" content="https://www.youtube.com/watch?v=uci1KXfzLTU" />
-      <meta itemProp="thumbnailUrl" content="https://img.youtube.com/vi/uci1KXfzLTU/maxresdefault.jpg" />
+      <meta
+        itemProp="contentUrl"
+        content="https://www.youtube.com/watch?v=uci1KXfzLTU"
+      />
+      <meta
+        itemProp="thumbnailUrl"
+        content="https://img.youtube.com/vi/uci1KXfzLTU/maxresdefault.jpg"
+      />
 
       <div className="overlay" />
       <iframe
@@ -32,7 +41,11 @@ function HomeVideoArea() {
       ></iframe>
 
       <noscript>
-        <a href="https://www.youtube.com/watch?v=uci1KXfzLTU" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.youtube.com/watch?v=uci1KXfzLTU"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Videoyu YouTube üzerinden izlemek için tıklayın.
         </a>
       </noscript>

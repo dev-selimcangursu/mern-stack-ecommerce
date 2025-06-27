@@ -4,9 +4,10 @@
 }
 
 .pos-title {
-  font-size: 1.5rem;
   text-align: center;
-  color: #222;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .splide__slide {
@@ -19,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 220px; 
+  height: 220px;
   width: 100%;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -32,7 +33,7 @@
 
 .pos-card-img {
   width: auto;
-  height: 80px; 
+  height: 80px;
   object-fit: contain;
   margin-bottom: 1rem;
 }

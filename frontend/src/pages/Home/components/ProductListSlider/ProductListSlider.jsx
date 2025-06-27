@@ -18,28 +18,29 @@ function ProductListSlider() {
     dispatch(fetchSectionProduct(slug));
     navigate(`/urun/detay/${slug}`);
   }
+
   const products = [
     {
       id: 1,
-      title: "Wiky Watch 5S",
+      title: "Wiky Watch 5S Akıllı Çocuk Saati",
       image: Wiky5SImage,
       slug: "wiky-watch-5s-akilli-cocuk-saati",
     },
     {
       id: 2,
-      title: "Wiky Watch 5E",
+      title: "Wiky Watch 5E Akıllı Çocuk Saati",
       image: Wiky5EImage,
       slug: "wiky-watch-5e-akilli-cocuk-saati",
     },
     {
       id: 3,
-      title: "Wiky Watch 5Plus",
+      title: "Wiky Watch 5Plus Akıllı Çocuk Saati",
       image: Wiky5PlusImage,
       slug: "wiky-watch-5plus-akilli-cocuk-saati",
     },
     {
       id: 4,
-      title: "Wiky Watch 4S",
+      title: "Wiky Watch 4S Akıllı Çocuk Saati",
       image: Wiky4SImage,
       slug: "wiky-watch-4s-akilli-cocuk-saati",
     },
@@ -47,25 +48,34 @@ function ProductListSlider() {
 
   return (
     <section className="product-slider container-fluid my-5">
+      <h2 className="slider-heading">Tüm Wiky Watch Modellerimiz</h2>
       <Splide
         options={{
-          perPage: 3,
+          perPage: 4,
           focus: "center",
           gap: "1rem",
           type: "loop",
           autoplay: true,
           pauseOnHover: true,
           pagination: false,
+          breakpoints: {
+            1200: { perPage: 3 },
+            992: { perPage: 2 },
+            768: { perPage: 1 },
+          },
         }}
+        aria-label="Ürün Listesi Slaytı"
       >
         {products.map((product) => (
           <SplideSlide key={product.id}>
-            <div
+            <button
               className="product-card"
               onClick={() => productPageNavigate(product.slug)}
+              aria-label={`${product.title} detayına git`}
             >
-              <img src={product.image} alt={product.title} />
-            </div>
+              <img src={product.image} alt={product.title} loading="lazy" />
+              <h3>{product.title}</h3>
+            </button>
           </SplideSlide>
         ))}
       </Splide>

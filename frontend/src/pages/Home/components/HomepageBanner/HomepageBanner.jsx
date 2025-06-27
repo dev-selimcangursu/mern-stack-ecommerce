@@ -1,9 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchSectionProduct } from "../../../../redux/slices/ProductSlice";
 import BannerImageOne from "../../../../assets/banner1.jpeg";
 import BannerImageSecond from "../../../../assets/banner2.jpeg";
-import './HomepageBanner.css'
+import "./HomepageBanner.css";
 
 function HomepageBanner() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function handleBannerClick(slug) {
+    dispatch(fetchSectionProduct(slug));
+    navigate(`/urun/detay/${slug}`);
+  }
+
   return (
     <section className="homepage__banner container-fluid">
       <div className="row">
@@ -19,7 +30,12 @@ function HomepageBanner() {
         </div>
         <div className="col-md-6">
           <div className="row g-4">
-            <div className="col-md-6">
+            <div
+              className="productCard col-md-6"
+              onClick={() =>
+                handleBannerClick("wiky-watch-5s-akilli-cocuk-saati")
+              }
+            >
               <article className="card card--promo text-bg-dark h-100 shadow-sm">
                 <img
                   src={BannerImageOne}
@@ -28,7 +44,12 @@ function HomepageBanner() {
                 />
               </article>
             </div>
-            <div className="col-md-6">
+            <div
+              className="productCard col-md-6"
+              onClick={() =>
+                handleBannerClick("wiky-watch-5e-akilli-cocuk-saati")
+              }
+            >
               <article className="card card--promo text-bg-dark h-100 shadow-sm">
                 <img
                   src={BannerImageSecond}

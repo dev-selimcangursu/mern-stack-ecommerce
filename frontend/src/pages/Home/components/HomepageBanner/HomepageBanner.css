@@ -16,7 +16,9 @@
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.productCard{
+  cursor: pointer;
+}
 .card--promo .card-img {
   height: 100%;
   object-fit: cover;

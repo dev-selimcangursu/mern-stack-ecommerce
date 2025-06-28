@@ -24,7 +24,6 @@ function Home() {
       <MediaScreen/>
       <BlogArea/>
       <HomeInfo/>
-      <Footer/>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { SlBasketLoaded } from "react-icons/sl";
 import { CiUser } from "react-icons/ci";
@@ -7,10 +7,29 @@ import { RiShoppingBasketLine } from "react-icons/ri";
 import WikyLogo from "../assets/logo.png";
 import { MdAddCall } from "react-icons/md";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import { fetchSearchResult } from "../../redux/slices/SearchSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import "./Header.css";
 
 function Header() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+
+  function searchHandle(e) {
+    setSearch(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!search.trim()) return;
+    dispatch(fetchSearchResult(search)).then(() => {
+      navigate(`/search?q=${encodeURIComponent(search)}`);
+    });
+  }
+
   return (
     <>
       <header className="header" id="header">
@@ -35,13 +54,15 @@ function Header() {
               <SlBasketLoaded className="nav__icon" />
               <span className="nav__text">Sipariş Takibi</span>
             </a>
-            <form role="search" className="nav__search">
+            <form onSubmit={handleSubmit} role="search" className="nav__search">
               <label htmlFor="search" className="sr-only">
                 Ürün Ara
               </label>
               <input
                 id="search"
                 type="search"
+                value={search}
+                onChange={searchHandle}
                 className="nav__search-input"
                 placeholder="Ürün ara..."
                 aria-label="Ürün ara"

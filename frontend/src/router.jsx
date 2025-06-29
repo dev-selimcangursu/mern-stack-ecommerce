@@ -5,6 +5,7 @@ import ProductDetail from "./pages/Product/ProductDetail/ProductDetail";
 import BlogDetail from "./pages/Blog/BlogDetail/BlogDetail";
 import OrderTracking from "./pages/OrderTracking/OrderTracking";
 import Search from "./pages/Search/Search";
+import Register from "./pages/Auth/Register/Register";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/blog/detay/:slug" element={<BlogDetail />} />
       <Route path="/siparis-takip" element={<OrderTracking />} />
       <Route path="/search" element={<Search />} />
+      <Route path="/kayit-ol" element={<Register />} />
     </Routes>
   );
 }

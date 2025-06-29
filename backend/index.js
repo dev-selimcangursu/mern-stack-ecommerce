@@ -6,7 +6,7 @@ const WebformRoutes = require("./Routes/Webform");
 const BlogRoutes = require("./Routes/Blog");
 const OrderRoutes = require("./Routes/Order");
 const SearchRoutes = require("./Routes/Search");
-
+const AuthRoutes = require("./Routes/Auth.js");
 dotenv.config();
 const cors = require("cors");
 
@@ -30,6 +30,7 @@ app.use("/webform", WebformRoutes);
 app.use("/blog", BlogRoutes);
 app.use("/order", OrderRoutes);
 app.use("/search", SearchRoutes);
+app.use("/auth", AuthRoutes);
 
 const PORT = process.env.PORT || 5000;
 
